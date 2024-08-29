@@ -6,7 +6,6 @@ using Umbraco.Cms.Web.Common.Controllers;
 namespace Umbraco_Api.Controllers;
 
 
-
 [Route("umbraco/api/[controller]")]
 public class HomepageApiController : UmbracoApiController
 {
@@ -20,7 +19,6 @@ public class HomepageApiController : UmbracoApiController
         _umbracoContextFactory = umbracoContextFactory;
         _publishedContentQuery = publishedContentQuery;
     }
-
 
     [HttpGet("homepage")]
     public IActionResult GetHomepage()
@@ -49,3 +47,5 @@ public class HomepageApiController : UmbracoApiController
         }
     }
 }
+
+// https://localhost:44385/umbraco/api/homepageapi/homepage
