@@ -19,17 +19,17 @@ await app.BootUmbracoAsync();
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Umbraco API V1");
-        c.RoutePrefix = "swagger"; // Sets the Swagger UI at the "/swagger" URL
-    });
+    //app.UseSwagger();
+    //app.UseSwaggerUI(c =>
+    //{
+    //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Umbraco API V1");
+    //    c.RoutePrefix = "swagger"; // Sets the Swagger UI at the "/swagger" URL
+    //});
     app.UseDeveloperExceptionPage();
 }
 else
 {
-    app.UseExceptionHandler("/Home/Error");
+    //app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
 

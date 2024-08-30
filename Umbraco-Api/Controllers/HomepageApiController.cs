@@ -20,14 +20,14 @@ public class HomepageApiController : UmbracoApiController
         _publishedContentQuery = publishedContentQuery;
     }
 
-    [HttpGet("homepage")]
+    [HttpGet("home")]
     public IActionResult GetHomepage()
     {
         using (_umbracoContextFactory.EnsureUmbracoContext())
         {
             // Fetch homepage by its content type alias (e.g., "home") or ID
             var homepage = _publishedContentQuery.ContentAtRoot()
-                                .FirstOrDefault(c => c.ContentType.Alias == "homepage");
+                                .FirstOrDefault(c => c.ContentType.Alias == "home");
 
             if (homepage == null)
             {
